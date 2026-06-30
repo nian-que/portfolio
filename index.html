@@ -52,8 +52,6 @@
     letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px;
   }
   section h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: #b89460; border-radius: 2px; }
-
-  /* Info */
   .info-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 8px 28px;
@@ -63,8 +61,6 @@
   .info-item { display: flex; gap: 6px; font-size: 0.9rem; }
   .info-item .label { color: #8b7355; flex-shrink: 0; }
   .info-item .value { color: #3a3a3a; }
-
-  /* Cards */
   .edu-card, .exp-card {
     background: #fff; border: 1px solid #e8e0d5; border-radius: 10px;
     padding: 24px 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
@@ -75,20 +71,18 @@
   }
   .edu-header h3, .exp-header h3 { font-size: 1.05rem; color: #3a2a1a; font-weight: 600; }
   .edu-date, .exp-date { font-size: 0.85rem; color: #a09080; }
-  .edu-major, .exp-role { font-size: 0.9rem; color: #8b7355; margin-bottom: 6px; }
+  .edu-major { font-size: 0.9rem; color: #8b7355; margin-bottom: 6px; }
   .edu-courses { font-size: 0.88rem; color: #6b6058; line-height: 1.6; }
+  .edu-projects { margin-top: 12px; }
+  .edu-projects li { font-size: 0.88rem; color: #5a5048; margin-bottom: 6px; list-style: disc inside; line-height: 1.7; }
   .exp-detail { margin-top: 10px; }
-  .exp-detail li { font-size: 0.88rem; color: #5a5048; margin-bottom: 5px; list-style: disc inside; }
-
-  /* Skills */
+  .exp-detail li { font-size: 0.88rem; color: #5a5048; margin-bottom: 5px; list-style: disc inside; line-height: 1.7; }
   .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
   .skill-tag {
     padding: 5px 16px; border-radius: 20px;
     background: #f5f0e8; color: #8b7355; border: 1px solid #e0d5c0;
     font-size: 0.85rem;
   }
-
-  /* Video Slider */
   .slider-wrapper { position: relative; }
   .slider {
     display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
@@ -106,7 +100,6 @@
   .slide-body { padding: 20px 24px; }
   .slide-body h3 { font-size: 1.05rem; color: #3a2a1a; font-weight: 600; margin-bottom: 4px; }
   .slide-body p { font-size: 0.88rem; color: #8b7355; }
-
   .slider-controls {
     display: flex; align-items: center; justify-content: center;
     gap: 16px; margin-top: 20px;
@@ -127,16 +120,13 @@
     transition: all 0.3s;
   }
   .dot.active { background: #b89460; width: 24px; border-radius: 4px; }
-
   .single-image img { width: 100%; display: block; max-height: 520px; object-fit: contain; background: #f0ebe0; }
   .eval-text { font-size: 0.93rem; color: #5a5048; line-height: 1.9; }
   .contact-row { display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 0.93rem; color: #5a5048; }
-
   footer {
     text-align: center; padding: 28px 24px;
     color: #a09080; font-size: 0.85rem; border-top: 1px solid #e8e0d5;
   }
-
   @media (max-width: 640px) {
     header { padding: 60px 20px 45px; }
     main { padding: 32px 16px 60px; }
@@ -147,7 +137,7 @@
 </head>
 <body>
 <header>
-  <img class="header-avatar" src="photo.jpg" alt="黄子明">
+  <img class="header-avatar" src="https://portfolio-videos-1448868400.cos.ap-guangzhou.myqcloud.com/photo.jpg" alt="黄子明">
   <h1>黄子明<span>Huang Ziming</span></h1>
   <p class="subtitle">数字媒体艺术专业 · 新媒体内容创作</p>
   <span class="badge">Portfolio</span>
@@ -165,7 +155,6 @@
       <div class="info-item" style="grid-column: 1 / -1;"><span class="label">现　　居</span><span class="value">广东省深圳市龙岗区</span></div>
     </div>
   </section>
-
   <section>
     <h2>教育背景</h2>
     <div class="edu-card">
@@ -177,23 +166,30 @@
       <p class="edu-courses">主修：数字摄影技术、动态图像设计、三维虚拟演示、UI界面设计、虚拟现实基础、视听语言</p>
     </div>
   </section>
-
   <section>
     <h2>实习经历</h2>
     <div class="exp-card">
       <div class="exp-header">
         <h3>金话筒（广州）信息科技有限公司</h3>
-        <span class="exp-date">2025.07 — 2025.10</span>
+        <span class="exp-date">2025.06 — 2025.08</span>
       </div>
-      <p class="exp-role">新媒体运营（实习生）</p>
+      <p class="edu-major">新媒体运营（实习生）</p>
       <ul class="exp-detail">
-        <li>独立运营公司微信视频号，负责选题策划、脚本撰写、拍摄执行、后期剪辑及发布运营全链路工作</li>
+        <li>独立运营公司自媒体账号，负责从选题策划、脚本撰写、拍摄执行到后期剪辑、发布运营的全链路工作</li>
         <li>结合品牌定位与热点趋势制定内容策略，保证内容更新频率与质量</li>
-        <li>定期复盘内容数据（播放量、互动率、粉丝增长），基于数据反馈优化内容方向</li>
+        <li>定期复盘内容数据（播放量、互动率、粉丝增长等），基于数据反馈优化内容方向</li>
       </ul>
     </div>
   </section>
-
+  <section>
+    <h2>校园经历</h2>
+    <div class="edu-card">
+      <ul class="edu-projects">
+        <li>参与院校级微电影项目，全程跟进分镜头脚本创作、场景调度及实际拍摄，积累了从前期策划到现场执行的全流程实践经验。在团队协作中负责分镜头设计与拍摄执行，具备良好的画面叙事能力和现场协调能力。</li>
+        <li>参与学校招生宣传片配音工作，根据宣传片内容风格与节奏完成旁白录制，助力学校招生宣传推广。</li>
+      </ul>
+    </div>
+  </section>
   <section>
     <h2>技能证书</h2>
     <div class="skill-list">
@@ -205,7 +201,6 @@
       <span class="skill-tag">Office</span>
     </div>
   </section>
-
   <section>
     <h2>作品展示</h2>
     <div class="slider-wrapper" id="sliderWrapper">
@@ -239,7 +234,7 @@
         </div>
         <div class="slide" id="slide3">
           <div class="single-image">
-            <img src="ue5_screenshot.jpg" alt="废墟场景截图">
+            <img src="https://portfolio-videos-1448868400.cos.ap-guangzhou.myqcloud.com/ue5_screenshot.jpg" alt="废墟场景截图">
           </div>
           <div class="slide-body">
             <h3>虚幻5 · 废墟场景搭建</h3>
@@ -248,81 +243,59 @@
         </div>
       </div>
       <div class="slider-controls">
-        <button class="slider-btn" id="prevBtn" aria-label="上一个">◂</button>
+        <button class="slider-btn" id="prevBtn" aria-label="上一个">&#9664;</button>
         <div class="dots" id="dots">
           <button class="dot active" data-index="0"></button>
           <button class="dot" data-index="1"></button>
           <button class="dot" data-index="2"></button>
           <button class="dot" data-index="3"></button>
         </div>
-        <button class="slider-btn" id="nextBtn" aria-label="下一个">▸</button>
+        <button class="slider-btn" id="nextBtn" aria-label="下一个">&#9654;</button>
       </div>
     </div>
   </section>
-
   <section>
     <h2>自我评价</h2>
     <p class="eval-text">数字媒体艺术专业在读，具备新媒体内容创作的理论基础。实习期间独立负责公司自媒体账号运营，涵盖脚本创作、拍摄及后期剪辑全流程，熟悉短视频内容生产逻辑。在校参与微电影分镜头创作与拍摄，具备画面叙事及团队协作能力。对新媒体运营有热情，关注平台趋势与用户偏好，学习能力强，善于在实践中快速成长。</p>
   </section>
-
   <section>
     <h2>联系方式</h2>
     <div class="contact-row">
-      <span>📞 19210481931</span>
-      <span>✉️ 2684786039@qq.com</span>
-      <span>📍 广东省深圳市龙岗区</span>
+      <span>&#128222; 19210481931</span>
+      <span>&#9993; 2684786039@qq.com</span>
+      <span>&#128205; 广东省深圳市龙岗区</span>
     </div>
   </section>
 </main>
-<footer>© 2026 黄子明</footer>
-
+<footer>&copy; 2026 黄子明</footer>
 <script>
 (function() {
-  const slider = document.getElementById('slider');
-  const dots = document.querySelectorAll('.dot');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const total = dots.length;
-
+  var slider = document.getElementById('slider');
+  var dots = document.querySelectorAll('.dot');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var total = dots.length;
   function goTo(index) {
     slider.scrollTo({ left: slider.clientWidth * index, behavior: 'smooth' });
   }
-
   function updateDots(index) {
-    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === index); });
   }
-
   function getCurrentIndex() {
     return Math.round(slider.scrollLeft / slider.clientWidth);
   }
-
-  slider.addEventListener('scroll', function() {
-    updateDots(getCurrentIndex());
-  });
-
-  prevBtn.addEventListener('click', function() {
-    const i = getCurrentIndex();
-    goTo(Math.max(0, i - 1));
-  });
-
-  nextBtn.addEventListener('click', function() {
-    const i = getCurrentIndex();
-    goTo(Math.min(total - 1, i + 1));
-  });
-
+  slider.addEventListener('scroll', function() { updateDots(getCurrentIndex()); });
+  prevBtn.addEventListener('click', function() { var i = getCurrentIndex(); goTo(Math.max(0, i - 1)); });
+  nextBtn.addEventListener('click', function() { var i = getCurrentIndex(); goTo(Math.min(total - 1, i + 1)); });
   dots.forEach(function(dot) {
-    dot.addEventListener('click', function() {
-      goTo(parseInt(dot.dataset.index));
-    });
+    dot.addEventListener('click', function() { goTo(parseInt(dot.dataset.index)); });
   });
-
-  // Touch swipe hint
-  let touchStartX = 0;
+  var touchStartX = 0;
   slider.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; });
   slider.addEventListener('touchend', function(e) {
-    const diff = touchStartX - e.changedTouches[0].clientX;
+    var diff = touchStartX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 60) {
-      const i = getCurrentIndex();
+      var i = getCurrentIndex();
       if (diff > 0) goTo(Math.min(total - 1, i + 1));
       else goTo(Math.max(0, i - 1));
     }
